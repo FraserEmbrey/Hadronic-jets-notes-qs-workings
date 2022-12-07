@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage[parfill]{parskip}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\title{Project notes}
+\author{Fraser}
+\date{\today}
+
+\begin{document}
+Integral is: $\int_{0}^{1} \frac{d\theta ^2}{\theta ^2} \int_{0}^{2\pi} \frac{d\phi}{2\pi} \int \frac{dz}{1-z} \left( \frac{2C_A}{1-z} + \frac{2C_F}{1-z} + \frac{2C_F}{1-z} \right) \Theta \left( T_m - \frac{2|k_x|}{P_t} \right)$
+
+$\int \frac{d\zeta}{\zeta} R'(\zeta T_m)$
+
+$C_F$ is the Casimir of the fundamental representation and $C_A$ is the Casimir of the adjoint representation.
+
+We want to write $k_m$ in terms of $z, \theta \& \phi$; for the Heaviside theta function:
+$\Theta \left( \frac{2|k_x|}{P_t} - T_m \right)$, where $|k_x| = k_t|\sin{\theta}|$ 
+
+\begin{figure}[ht]
+    \centering
+    \incfig{kinematics}
+    \caption{kinematics}
+    \label{fig:kinematics}
+\end{figure}
+
+Splitting the full angle between emissions (jets?) $\theta$ into $\theta _a, \theta _b$ we see that:
+$\frac{k_t}{P_t} = (1-z)\theta_a = z\theta_b \implies (1-z)\theta_a = z\theta_b$.
+
+$2(1-z) \theta |\sin{\Phi}| > T_m \implies \ln{\frac{1}{z-1}} + \ln{\frac{1}{\theta}} + \ln{\frac{1}{2}} < \ln{\frac{1}{T_m}}$.
+
+The '>' constraints correspond to lines/areas in the $\ln \times \ln$ plane. These create a triangle that can be integrated over.
+$R' = -T_m \frac{dR}{dT_m}$, we label $\zeta \to (1-z)\theta$, then we see that:
+$\alpha _s = \alpha _s[(1-z)\theta P_t] = \alpha _s (\zeta P_t)$
+
+$\implies \frac{d\theta^2}{\theta^2} dz \frac{2C_f}{1-z} = 2C_F \frac{\alpha _s}{\pi} d\ln{\frac{1}{\theta}} d\ln{\frac{1}{1-z}}$
+
+$\int |\sin{\phi}|$ is finite, as $\phi$ is integrated over all space but is practically constrained between $0 \to 2\pi$
+\end{document}
