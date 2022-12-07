@@ -26,6 +26,30 @@ $z \to u\theta \to v \implies u = \ln{\frac{1}{1-z}}, v = \ln{\frac{1}{\theta ^2
 $2A \int_{0}^{2\pi} \frac{d\phi}{2\pi} \int_{0}^{\infty} du \int_{0}^{\infty} dv \Theta (2(1-z)\theta \sin{\phi} - T_m) $ \\
 $\ln{\frac{1}{1-z}} =x$
 
+$R(T_m) = \int \frac{d\phi}{2\pi} \int \frac{d\theta^2}{\theta^2} \int \frac{dz}{1-z} (2C_A +4C_F) \Theta(\frac{2|k_x|}{P_t} - T_m$
+
+Substitute $\ln(\frac{1}{1-z} = u \implies \frac{du}{dz} = \frac{1}{1-z}$ and $\ln (\frac{1}{\theta^2}) = v \implies \frac{dv}{d\theta^2} = \frac{1}{\theta^2}$.
+
+$\implies R(T_m) = \int \frac{d\phi}{2\pi} \int du \int dv (2C_A + 4C_F)\Theta \left( \frac{2|k_x|}{P_t} - T_m \right)$
+
+We know $k_x = (1-z)\theta\sin{\phi} P_t$
+
+$\implies \frac{1}{\pi}(C_A + 2C_F) \int d\phi \int du \int dv \Theta (2(1-z)\theta \sin (\phi) - T_m$
+
+The graph forms an isosceles right angle triangle, and the height of the triangle is $a = \ln (\frac{T_m}{s(\sin(\phi)}$ so the area is $\frac{a^2}{2}$.
+
+$R(T_m) = \frac{1}{2π}(C_A + 2C_F) \int_{0}^{2\pi} d\phi \ln^2(\frac{T_m}{2|\sin \phi|})$
+
+We want to find what $R'(v)$ 
+
+$R(v) \equiv $
+
+$\Sigma_{n=0}^\infty \frac{(R'(Tm))^n}{n!} \\int_{0}^{\infty} \Pi_i \frac{d\zeta_i}{\zeta_i} \frac{d\phi_i}{2\pi} e^{-\nu \zeta_i} e^{-ib (\zeta_i \sin{})}$
+
+$R(v) = \frac{1}{4\pi} \int_0^{2\pi} (\frac{\ln a}{| \sin{x} |})^2 = \frac{\frac{\pi^3}{6}+2\pi\ln ^2 a}{4\pi}$
+
+$\frac{\alpha_s}{\pi}(2C_F + C_A)(\ln^2 \frac{1}{T_m} +\frac{\pi^2}{12})$
+
 \section{Questions}
 
 \end{document}
